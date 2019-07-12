@@ -15,7 +15,7 @@ namespace BattleSimulator.Tests
         }
 
         [Fact]
-        public void AssertThatValuesAreRandomized()
+        public void AssertThatRandomizedValuesAreInRange()
         {
             bool isInRange = false;
 
