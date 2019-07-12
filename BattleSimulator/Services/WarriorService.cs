@@ -7,11 +7,12 @@ namespace BattleSimulator.Services
 {
     public class WarriorService
     {
-        public object SpawnNewWarrior(int id)
+        public Warrior SpawnWarrior(int id)
         {
             return new Warrior
             {
                 Id = id,
+                Iniative = Randomize(1,10),
                 MinAttack = Randomize(1, 3),
                 MaxAttack = Randomize(4, 8),
                 MinDefense = Randomize(2, 4),
