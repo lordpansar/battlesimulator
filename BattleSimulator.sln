@@ -1,11 +1,11 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.489
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29102.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BattleSimulator", "BattleSimulator\BattleSimulator.csproj", "{21BBDED7-1522-405B-8B11-F6BFC1BC1698}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BattleSimulator", "BattleSimulator\BattleSimulator.csproj", "{21BBDED7-1522-405B-8B11-F6BFC1BC1698}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BattleSimulator.Tests", "BattleSimulator.Tests\BattleSimulator.Tests.csproj", "{9C4BD3D9-EB3D-4518-9C8B-F318A478F6AB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BattleSimulator.Tests", "BattleSimulator.Tests\BattleSimulator.Tests.csproj", "{9C4BD3D9-EB3D-4518-9C8B-F318A478F6AB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
