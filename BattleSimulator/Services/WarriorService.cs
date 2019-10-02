@@ -1,7 +1,5 @@
-﻿using BattleSimulator.Models;
+using BattleSimulator.Models;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace BattleSimulator.Services
 {
