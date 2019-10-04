@@ -55,7 +55,7 @@ namespace BattleSimulator.Services
                 }
                 else
                 {
-                    Console.WriteLine($"Haha! {first.Name}'s puny sword is no match for {second.Name}'s mighty armour!");
+                    Deflect(first.Name, second.Name);
                     Console.WriteLine($"{second.Name} furiously attacks!");
                     
                     defenderIsHurt = Attack(HelperService.Randomize(second.MinAttack, second.MaxAttack), HelperService.Randomize(first.MinDefense, first.MaxDefense));
@@ -66,8 +66,8 @@ namespace BattleSimulator.Services
                         Console.WriteLine($"{second.Name} viciously slays {first.Name}. May he feast forever in Valhalla.\n");
                         break;
                     }
-                    
-                    Console.WriteLine($"Haha! {second.Name}'s puny sword is no match for {first.Name}'s mighty armour!");
+
+                    Deflect(second.Name, first.Name);
                 }
             }
         }
@@ -86,6 +86,11 @@ namespace BattleSimulator.Services
             {
                 return false;
             }
+        }
+
+        private void Deflect(string attackerName, string defenderName)
+        {
+            Console.WriteLine($"Haha! {attackerName}'s puny sword is no match for {defenderName}'s mighty armour!\n");
         }
     }
 }
