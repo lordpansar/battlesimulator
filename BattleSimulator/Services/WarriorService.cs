@@ -1,5 +1,6 @@
 ﻿using BattleSimulator.Models;
 using System;
+using System.Collections.Generic;
 
 namespace BattleSimulator.Services
 {
@@ -18,6 +19,20 @@ namespace BattleSimulator.Services
                 MaxDefense = HelperService.Randomize(5, 8),
                 IsAlive = true
             };
+        }
+
+        public List<Warrior> SpawnWarriors(int number)
+        {
+            var warriors = new List<Warrior>();
+            Warrior warrior;
+
+            for (int warriorCount = 1; warriorCount < number; warriorCount++)
+            {
+                warrior = SpawnWarrior(warriorCount);
+                warriors.Add(warrior);
+            }
+
+            return warriors;
         }
 
         public string GenerateName()
