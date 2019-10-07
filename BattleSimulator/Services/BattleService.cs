@@ -12,34 +12,12 @@ namespace BattleSimulator.Services
             var first = new Warrior();
             var second = new Warrior();
 
-            if (warriors[0].Iniative > warriors[1].Iniative)
-            {
-                //If first draws first
-                first = warriors[0];
-                second = warriors[1];
-            }
-            else if(warriors[1].Iniative > warriors[0].Iniative)
-            {
-                //If second draws first
-                first = warriors[1];
-                second = warriors[0];
-            }
-            else
-            {
-                //Randomize draw success
-                var roll = HelperService.Randomize(1, 2);
+            first = warriors[HelperService.RandomizeFromList(warriors.Count)];
+            second = warriors[HelperService.RandomizeFromList(warriors.Count)];
+            warriors.Remove(first);
+            warriors.Remove(second);
 
-                if (roll == 1)
-                {
-                    first = warriors[0];
-                    second = warriors[1];
-                }
-                else
-                {
-                    first = warriors[1];
-                    second = warriors[0];
-                }
-            }
+            
 
             while (first.IsAlive && second.IsAlive)
             {
@@ -68,6 +46,38 @@ namespace BattleSimulator.Services
                     }
 
                     Deflect(second.Name, first.Name);
+                }
+            }
+        }
+
+        public void RollIniative(Warrior one, Warrior two)
+        {
+            if (one.Iniative > two.Iniative)
+            {
+                //If first draws first
+                first = one;
+                second = two;
+            }
+            else if (two.Iniative > one.Iniative)
+            {
+                //If second draws first
+                first = two;
+                second = one;
+            }
+            else
+            {
+                //Randomize draw success
+                var roll = HelperService.Randomize(1, 2);
+
+                if (roll == 1)
+                {
+                    first = one;
+                    second = two;
+                }
+                else
+                {
+                    first = two;
+                    second = one;
                 }
             }
         }

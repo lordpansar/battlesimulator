@@ -15,5 +15,12 @@ namespace BattleSimulator.Services
 
             return random.Next(min, max);
         }
+
+        public static int RandomizeFromList(int count)
+        {
+            var random = new Random();
+
+            return random.Next(count);
+        }
     }
 }
