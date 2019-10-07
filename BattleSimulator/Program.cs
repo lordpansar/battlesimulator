@@ -18,15 +18,14 @@ namespace BattleSimulator
         {
             WarriorService warriorService = new WarriorService();
             BattleService battleService = new BattleService();
-            var warriors = new List<Warrior>();
-
-            var crogar = warriorService.SpawnWarrior(1);
-            var torulf = warriorService.SpawnWarrior(2);
-
-            warriors.Add(crogar);
-            warriors.Add(torulf);
+            
+            var warriors = warriorService.SpawnWarriors(4);
+            var list2 = new List<Warrior>();
+            list2.Add(warriors[2]);
+            list2.Add(warriors[3]);
 
             battleService.CommenceBattle(warriors);
+            battleService.CommenceBattle(list2);
         }
     }
 }
