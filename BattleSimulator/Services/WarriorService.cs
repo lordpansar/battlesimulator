@@ -26,7 +26,7 @@ namespace BattleSimulator.Services
             var warriors = new List<Warrior>();
             Warrior warrior;
 
-            for (int warriorCount = 1; warriorCount < number; warriorCount++)
+            for (int warriorCount = 1; warriorCount < number+1; warriorCount++)
             {
                 warrior = SpawnWarrior(warriorCount);
                 warriors.Add(warrior);
