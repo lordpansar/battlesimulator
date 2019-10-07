@@ -72,6 +72,12 @@ namespace BattleSimulator.Services
             }
         }
 
+        public void Fight(List<Warrior> warriors)
+        {
+            //Move battle logic here
+            throw new NotImplementedException();
+        }
+
         public bool Attack(int attack, int defense)
         {
             Console.WriteLine($"Attack: {attack} Defense: {defense}");
